@@ -8,7 +8,7 @@ updateTable();
 $(".logoutBtn").click(function(){
 	localStorage.removeItem('token');
 	$.ajax({
-        url: "https://localhost:7268/api/Users/delete?Token=" + token,
+        url: "http://194.87.95.166:8060/api/Users/delete?Token=" + token,
         type: "post",
 	    success: function (response) {
 	        	window.location.href = "login.html";
@@ -23,7 +23,7 @@ $(".logoutBtn").click(function(){
 function deleteChannel(channelId)
 {
 	$.ajax({
-        url: "https://localhost:7268/api/Monitors/delete?Token=" + token + '&ChannelId=' + channelId,
+        url: "http://194.87.95.166:8060/api/Monitors/delete?Token=" + token + '&ChannelId=' + channelId,
         type: "post",
 	    success: function (data) { 
 	        updateTable();
@@ -38,7 +38,7 @@ function updateTable()
 {
 	$('.tablePadding tbody').empty();
 	$.ajax({
-        url: "https://localhost:7268/api/Monitors?Token=" + token,
+        url: "http://194.87.95.166:8060/api/Monitors?Token=" + token,
         type: "get",
         dataType: 'json',
 	    success: function (data) { 
@@ -86,7 +86,7 @@ $(".customBtn").click(function(){
 		params += filters;
 	}
 	$.ajax({
-        url: "https://localhost:7268/api/Monitors/add?" + params,
+        url: "http://194.87.95.166:8060/api/Monitors/add?" + params,
         type: "post",
 	    success: function (response) {
 	    	updateTable();

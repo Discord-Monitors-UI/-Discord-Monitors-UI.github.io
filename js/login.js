@@ -11,7 +11,7 @@ $(".newBtn").click(function(){
   	return;
   }
   $.ajax({
-        url: "https://localhost:7268/api/Users/add?Token=" + token,
+        url: "http://194.87.95.166:8060/api/Users/add?Token=" + token,
         type: "post",
         success: function (response) {
         	localStorage.setItem('token', token);
