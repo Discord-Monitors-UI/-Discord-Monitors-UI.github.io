@@ -1,0 +1,72 @@
+.content {
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url('https://i.ibb.co/hHsXjkv/image.gif');
+  background-size: cover;
+}
+}
+.table {
+  font-size: 17px;
+  max-width: 500px;
+  text-align: center;
+  vertical-align: center;
+}
+.delIcon {
+  width: 20px;
+  height: 20px;
+}
+h2 {
+  font-weight: 600;
+  color: white;
+  margin-bottom: 5%;
+}
+h1 {
+  font-weight: 700;
+  margin-top: 3%;
+  color: white;
+}
+.allContent {
+  background: #282d31;
+  height: 100vh;
+}
+.inputBox {
+  width: 50%;
+  text-align: center;
+}
+.customBtn {
+  margin-top: 2vh;
+  min-width: 180px;
+  width: 50%;
+  height: 25%;
+}
+.groupBox {
+  margin-top: 2vh;
+}
+.tablePadding {
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .tablePadding {
+    display: inline-block;
+    overflow-y: scroll;
+  }
+}
+.logoutBtn {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  --bs-btn-padding-y: 0.5rem; 
+  --bs-btn-padding-x: 1rem;
+}

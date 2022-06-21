@@ -1,0 +1,27 @@
+
+.content {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('https://steamuserimages-a.akamaihd.net/ugc/882005587668363216/D434ABB82ED11FB4A7969D5E74B3D3AC825F9AAC/?imw=512&amp;imh=288&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true');
+  background-size: auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.groupBox {
+  max-width: 600px;
+  width: calc(100% - 10%);
+}
+.labelText {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  color: white;
+}
+
+.newBtn {
+  width: 150px;
+  height: 40px;
+}
