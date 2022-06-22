@@ -52,6 +52,7 @@ function updateTable()
 	        });
 	        $(".delIcon").click(function() {
 	        	var channelID = $(this).attr('id');
+				$(this).css('display', 'none');
 	        	deleteChannel(channelID);
 	        });
     	},
