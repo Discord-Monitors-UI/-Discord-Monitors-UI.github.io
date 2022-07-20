@@ -1,4 +1,6 @@
 var token = localStorage.getItem('token');
+var apiEndpoint = "https://discordmonitorapi.azurewebsites.net";
+
 if (!token)
 {
 	window.location.href = "login.html";
@@ -8,7 +10,7 @@ updateTable();
 $(".logoutBtn").click(function(){
 	localStorage.removeItem('token');
 	$.ajax({
-        url: "https://discord-monitor.azurewebsites.net/api/Users/delete?Token=" + token,
+        url: apiEndpoint + "/api/Users/delete?Token=" + token,
         type: "post",
 	    success: function (response) {
 	        	window.location.href = "login.html";
@@ -23,7 +25,7 @@ $(".logoutBtn").click(function(){
 function deleteChannel(channelId)
 {
 	$.ajax({
-        url: "https://discord-monitor.azurewebsites.net/api/Monitors/delete?Token=" + token + '&ChannelId=' + channelId,
+        url: apiEndpoint + "/api/Monitors/delete?Token=" + token + '&ChannelId=' + channelId,
         type: "post",
 	    success: function (data) { 
 	        updateTable();
@@ -38,7 +40,7 @@ function updateTable()
 {
 	$('.tablePadding tbody').empty();
 	$.ajax({
-        url: "https://discord-monitor.azurewebsites.net/api/Monitors?Token=" + token,
+        url: apiEndpoint + "/api/Monitors?Token=" + token,
         type: "get",
         dataType: 'json',
 	    success: function (data) { 
@@ -87,7 +89,7 @@ $(".customBtn").click(function(){
 		params += filters;
 	}
 	$.ajax({
-        url: "https://discord-monitor.azurewebsites.net/api/Monitors/add?" + params,
+        url: apiEndpoint + "/api/Monitors/add?" + params,
         type: "post",
 	    success: function (response) {
 	    	updateTable();

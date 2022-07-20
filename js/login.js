@@ -1,3 +1,5 @@
+var apiEndpoint = "https://discordmonitorapi.azurewebsites.net";
+
 if (localStorage.getItem('token'))
 {
 	window.location.href = "index.html";
@@ -11,7 +13,7 @@ $(".newBtn").click(function(){
   	return;
   }
   $.ajax({
-        url: "https://discord-monitor.azurewebsites.net/api/Users/add?Token=" + token,
+        url: apiEndpoint + "/api/Users/add?Token=" + token,
         type: "post",
         success: function (response) {
         	localStorage.setItem('token', token);
